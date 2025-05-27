@@ -1,0 +1,30 @@
+[
+    {
+        "name": "zootopia",
+        "url": "https://github.com/damienneimad/zootopia",
+        "description": "Python script that processes JSON data and generates HTML files from a template.",
+        "homepage": null,
+        "notes": "Description updated from README."
+    },
+    {
+        "name": "masterblog",
+        "url": "https://github.com/damienneimad/masterblog",
+        "description": "Basic Blog Application using Flask",
+        "homepage": null,
+        "notes": "Homepage might be in README."
+    },
+    {
+        "name": "Best-Buy",
+        "url": "https://github.com/damienneimad/Best-Buy",
+        "description": "Store management system for Best Buy using Python, demonstrating OOP principles to manage products, promotions, and orders.",
+        "homepage": null,
+        "notes": "Description updated from README."
+    },
+    {
+        "name": "Queen-Royal-Game-forked-",
+        "url": "https://github.com/damienneimad/Queen-Royal-Game-forked-",
+        "description": "A game where you navigate Wikipedia articles through links to find Queen Elizabeth II, starting from a random set of articles.",
+        "homepage": "https://codesandbox.io/p/github/damienneimad/Queen%20Royal%20Game%20(forked)",
+        "notes": "Description updated from README."
+    }
+]
