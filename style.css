@@ -1,0 +1,108 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0; /* Remove default body margin */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: #fff; /* Optional: give nav a slightly different background */
+    padding: 10px 0; /* Add some padding to the nav bar */
+    border-bottom: 1px solid #eee; /* Subtle separator */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center navigation items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600; /* A bit bolder for headings */
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+/* Paragraphs */
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/* Links */
+a {
+    color: #007bff; /* A standard link blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific override for nav links if a different link color is desired elsewhere */
+nav a {
+    color: #333; /* Keep nav links dark */
+}
+
+nav a:hover {
+    color: #007bff; /* Optional: nav links change color on hover */
+    text-decoration: underline;
+}
+
+
+/* Project Articles */
+article {
+    margin-bottom: 2em;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* Horizontal Rule */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd; /* Slightly darker than #eee for better visibility */
+    margin: 2em 0;
+}
