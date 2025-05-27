@@ -1,0 +1,142 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0A0F1A;
+    color: #E0E0E0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7; /* Added for paragraph consistency */
+    margin: 0;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #00FFFF;
+    text-shadow: 0 0 4px #00FFFF, 0 0 8px #00FFFF, 0 0 12px #00FFFF; /* Tighter glow */
+    margin-top: 1.5em;
+    margin-bottom: 0.75em; /* Adjusted for better spacing */
+}
+
+h1 {
+    font-size: 3em; /* Larger for impact */
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+/* Paragraphs */
+p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    margin-bottom: 1.2em; /* Ensure sufficient margin */
+}
+
+/* Links */
+a {
+    color: #FF00FF;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #FF69B4; /* Lighter Pink */
+    text-shadow: 0 0 8px #FF00FF, 0 0 15px #FF00FF;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(10, 15, 26, 0.8);
+    padding: 15px 0;
+    border-bottom: 1px solid #00FFFF;
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    font-family: 'Rajdhani', sans-serif;
+    color: #00FFFF;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-shadow: none; /* Remove heading-like glow initially */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF; /* Add glow on hover */
+}
+
+/* Project Articles (for projects.html) */
+article {
+    background-color: rgba(26, 10, 31, 0.5); /* Dark purple, semi-transparent */
+    border: 1px solid #FF00FF;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px -5px #FF00FF, inset 0 0 5px -2px #FF00FF;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */ /* Modified for scroll animation */
+    border-radius: 5px; /* Added a subtle border-radius */
+    
+    /* Added for scroll animation */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.3s ease-out, box-shadow 0.3s ease-in-out; /* Adjusted transform duration, changed box-shadow easing */
+}
+
+article.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+article:hover {
+    transform: translateY(-5px) scale(1.01); /* This will now combine with is-visible transform if not careful, but usually translateY is overridden */
+    box-shadow: 0 0 15px -5px #FF00FF, inset 0 0 10px -2px #FF00FF;
+}
+
+article h3 {
+    color: #FF00FF; /* Neon Pink for project titles */
+    text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF;
+    font-size: 1.6em; /* Slightly smaller than general h3 if needed inside article */
+    margin-top: 0.5em; /* Adjust top margin for article titles */
+}
+
+/* Horizontal Rule (for projects.html) */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(10, 15, 26, 0), #00FFFF, rgba(10, 15, 26, 0)); /* Fading to body background */
+    margin: 3em 0;
+    box-shadow: 0 0 5px #00FFFF;
+}
+
+/* .page-content-wrapper - No specific styles needed for now */
+/* It's primarily for JS animation targeting or future global layout adjustments. */
+/* Example:
+.page-content-wrapper {
+    overflow-x: hidden; // If animations cause horizontal scroll
+}
+*/
