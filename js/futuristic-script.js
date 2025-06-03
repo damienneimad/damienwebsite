@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 600); // Start after page wrapper animation (0.6s)
     }
 
-    // 2. Project Card Animation on Scroll (for projects.html)
-    if (window.location.pathname.endsWith('projects.html')) {
+    // 2. Project Card Animation on Scroll (for projects.html or /projects/)
+    if (window.location.href.endsWith('projects.html') ||
+        window.location.pathname.endsWith('/projects/')) {
         const articles = document.querySelectorAll('article');
 
         if (articles.length > 0) {
