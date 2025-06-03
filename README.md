@@ -13,3 +13,15 @@
             <p>Drop a ⭐️, fork something cool, or just say hi!</p>
 
             <p><a href="https://www.linkedin.com/in/damienlando/">View my LinkedIn Profile</a></p>
+
+## Running tests
+
+The repository provides a small Python unit test that verifies the structure of
+the `projects_data.json` files. To execute it, ensure Python 3 is installed and run:
+
+```bash
+python -m unittest discover -s tests
+```
+
+This command will load both JSON files and check that each project includes the
+`name`, `url`, and `description` keys.
