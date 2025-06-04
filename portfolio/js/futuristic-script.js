@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Starfield canvas background
+    const starCanvas = document.getElementById('starfield');
+    if (starCanvas) {
+        const ctx = starCanvas.getContext('2d');
+        let width, height;
+        const stars = [];
+
+        const resize = () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            starCanvas.width = width;
+            starCanvas.height = height;
+            stars.length = 0;
+            for (let i = 0; i < 100; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    size: Math.random() * 2 + 0.5,
+                    velocity: Math.random() * 0.5 + 0.2
+                });
+            }
+        };
+
+        const update = () => {
+            ctx.clearRect(0, 0, width, height);
+            for (const star of stars) {
+                star.y += star.velocity;
+                if (star.y > height) star.y = 0;
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(star.x, star.y, star.size, star.size);
+            }
+            requestAnimationFrame(update);
+        };
+
+        window.addEventListener('resize', resize);
+        resize();
+        update();
+    }
     // 1. Page Load Animations
     const pageContentWrapper = document.querySelector('.page-content-wrapper');
     if (pageContentWrapper) {
