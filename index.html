@@ -10,43 +10,189 @@
 </head>
 <body>
     <div class="bg"></div>
-    <div class="theme-buttons">
-        <label><input type="radio" name="theme" value="light" onclick="changeTheme('light')"> Light</label>
-        <label><input type="radio" name="theme" value="dark" onclick="changeTheme('dark')" checked> Dark</label>
-        <label><input type="radio" name="theme" value="monospaced" onclick="changeTheme('monospaced')"> Monospaced</label>
+    <div class="page-wrap">
+        <header class="masthead">
+            <div class="identity">
+                <p class="eyebrow">Software Engineering Student</p>
+                <h1>Damien Lando</h1>
+                <p class="lede">Curious junior developer blending React, Python, and data to build thoughtful experiences. Keen on IoT for smart indoor farming and tech-forward construction solutions.</p>
+                <div class="badge-row">
+                    <span class="badge">React &amp; Next.js</span>
+                    <span class="badge">Python &amp; FastAPI</span>
+                    <span class="badge">APIs &amp; data viz</span>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Mini builds</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Hackathons</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Half-baked ideas left</span>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="theme-buttons" aria-label="Theme selector">
+                    <label class="theme-pill">
+                        <input type="radio" name="theme" value="light" onclick="changeTheme('light')">
+                        <span>Light</span>
+                    </label>
+                    <label class="theme-pill">
+                        <input type="radio" name="theme" value="dark" onclick="changeTheme('dark')" checked>
+                        <span>Dark</span>
+                    </label>
+                    <label class="theme-pill">
+                        <input type="radio" name="theme" value="monospaced" onclick="changeTheme('monospaced')">
+                        <span>Monospaced</span>
+                    </label>
+                </div>
+                <div class="quick-links">
+                    <a href="#projects">Projects</a>
+                    <a href="#info">Experience</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="panel" id="projects">
+                <div class="panel-head">
+                    <p class="eyebrow">Selected Work</p>
+                    <h2>Projects that were fun to build</h2>
+                    <p class="panel-description">Small, opinionated experiments that taught me about APIs, data, and shipping something delightful.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Greenhouse Guardian</h3>
+                        <p>An IoT dashboard that monitors humidity, temperature, and light levels for indoor farming using MQTT and a React UI.</p>
+                        <span class="tag">React</span>
+                        <span class="tag">MQTT</span>
+                        <span class="tag">Data viz</span>
+                    </article>
+                    <article class="card">
+                        <h3>Site Supervisor</h3>
+                        <p>A construction site companion that logs daily tasks, automates reminders, and produces shareable weekly summaries.</p>
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Automation</span>
+                    </article>
+                    <article class="card">
+                        <h3>Pixel Stories</h3>
+                        <p>A playful portfolio generator that assembles case studies from structured content, letting me ship experiments fast.</p>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Contentful</span>
+                        <span class="tag">Design systems</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel" id="info">
+                <div class="panel-head">
+                    <p class="eyebrow">What I'm about</p>
+                    <h2>Learning in public</h2>
+                    <p class="panel-description">From hackathons to hardware prototypes, I like projects that combine curiosity with a real-world constraint.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>IoT for Indoor Farming</h3>
+                            <p>Designed sensor-driven automations that water plants only when readings demand it, keeping dashboards useful instead of noisy.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Construction Tech Curiosity</h3>
+                            <p>Bridged project management workflows with simple scripts that reduce manual logging, inspired by time on building sites.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Design-first Experiments</h3>
+                            <p>Ship quick UI prototypes to test ideas with real people, then refine them with metrics and thoughtful microcopy.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel split" id="contact">
+                <div>
+                    <div class="panel-head">
+                        <p class="eyebrow">Let's talk</p>
+                        <h2>Ready for your next project</h2>
+                        <p class="panel-description">Send a note about what you're building. I'm open to internships, hackathon teams, or pairing sessions to learn something new.</p>
+                    </div>
+                    <div class="highlight-list">
+                        <p><strong>Response time:</strong> within 24 hours</p>
+                        <p><strong>Time zones:</strong> flexible (UTC &amp; UTC+2)</p>
+                        <p><strong>Bonus:</strong> I bring snacks to pairing sessions.</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Contact Me</h2>
+                    <form action="/submit_form" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="What should we build together?" required></textarea>
+                        </div>
+                        <button type="submit">Send message</button>
+                        <p class="form-footnote">No spam, no mailing list—just a human reply.</p>
+                    </form>
+                </div>
+            </section>
+
+            <section class="panel" id="faq">
+                <div class="panel-head">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Answers to common questions</h2>
+                    <p class="panel-description">And if you don't see yours, drop it in the contact form. I love a good challenge.</p>
+                </div>
+                <div class="accordion" id="faqList">
+                    <details open>
+                        <summary>What technologies are you learning right now?</summary>
+                        <p>I'm diving deeper into React server components, FastAPI background tasks, and playful 2D visuals in the browser.</p>
+                    </details>
+                    <details>
+                        <summary>How do you collaborate?</summary>
+                        <p>With Figma for design, GitHub projects for planning, and weekly demos to keep momentum.</p>
+                    </details>
+                    <details>
+                        <summary>Do you enjoy pair programming?</summary>
+                        <p>Absolutely. It's the fastest way to learn and ship. Bring a problem and let's tackle it together.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="panel surprise" id="surprise">
+                <div class="panel-head">
+                    <p class="eyebrow">Surprise me</p>
+                    <h2>Need an idea spark?</h2>
+                    <p class="panel-description">Press the button for a random challenge we could hack on together.</p>
+                </div>
+                <div class="surprise-box">
+                    <p id="surprisePrompt">Generate a new challenge and let's build.</p>
+                    <button type="button" onclick="generateSurprise()">Generate a challenge</button>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="container">
-        <div class="header">
-            <h1>Damien TTT Lando</h1>
-            <p>Aspiring Junior Developer with a Keen Eye for Design</p>
-        </div>
-        <div class="sidebar">
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#info">Info</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </div>
-        <div class="content" id="contact">
-            <p>Software engineering student | ReactJS, Python, APIs | Experience in IoT for Smart Indoor Farming Solutions | Experience in Building Construction Management & Tech innovation</p>
-        </div>
-        <div class="contact-form">
-            <h2>Contact Me</h2>
-            <form action="/submit_form" method="POST" id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="5" placeholder="Comment" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
